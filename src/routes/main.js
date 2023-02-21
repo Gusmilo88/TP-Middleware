@@ -1,8 +1,10 @@
 const router = require("express").Router();
-const { index, admin } = require("../controllers/mainController")
+const { index, admin, notEntry } = require("../controllers/mainController");
+const acessAdmin = require("../middlewares/acessAdmin");
 
 router
     .get("/", index)
-    .get("/admin", admin)
+    .get("/admin",acessAdmin, admin)
+    .get("/notEntry",notEntry)
 
 module.exports = router

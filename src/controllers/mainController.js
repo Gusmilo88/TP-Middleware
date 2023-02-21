@@ -6,4 +6,8 @@ module.exports = {
     admin : (req, res) => {
         return res.render("admin")
     },
+    
+    notEntry : (req, res) => {
+        return res.render("notEntry")
+    }
 }
